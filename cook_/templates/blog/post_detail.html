@@ -14,9 +14,8 @@
                         <div class="single-post__title__text">
                             <ul class="label">
                                 <li>{{ post.category }}</li>
-                                <li>Desserts</li>
                             </ul>
-                            <h4>{{ post.title }}</h4>
+                            <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
                             <ul class="widget">
                                 <li>{{ post.auctor }}</li>
                                 <li>3 min read</li>
@@ -57,15 +56,15 @@
 
                         
                             <div class="single-post__recipe__details__indegradients">
-                                <h5>{{ recipe.ingredients }}</h5>
+                            <h5>Ingredients</h5>
+                                {{ recipe.ingredients|safe }}
                                 
                             </div>
-                            <div class="single-post__recipe__details__direction">
-                                <h5>{{ recipe.directions }}</h5>
+                            <div class="single-post__recipe__details__direction"> 
+                            <h5>Directions</h5>
+                            {{ recipe.directions|safe }}
                                 
-                            </div>
-                        
-                            
+                            </div>    
                         </div>
                      {% endfor %}
                     
