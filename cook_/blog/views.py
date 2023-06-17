@@ -9,7 +9,9 @@ class PostListView(ListView):
     model = Post
 
     def get_queryset(self):
-        return Post.objects.filter(category__tag=self.kwargs.get("tag")).select_related('category')
+        return Post.objects.filter(category__tag=self.kwargs.get("slug")).select_related('category')
+    
+    
 
 def home(request):
     return render(request, 'base.html')
