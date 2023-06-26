@@ -407,6 +407,28 @@ ol {
 	padding: 10px 0;
 }
 
+.header__menu ul li .children {
+	position: absolute;
+	left: 100px;
+	top: 62px;
+	width: 180px;
+	background: #222222;
+	z-index: 9;
+	text-align: left;
+	-webkit-transition: all, 0.3s;
+	-o-transition: all, 0.3s;
+	transition: all, 0.3s;
+	opacity: 0;
+	visibility: hidden;
+	padding: 10px 0;
+}
+
+.header__menu ul li:hover .children {
+	opacity: 1;
+	visibility: visible;
+	top: 41px;
+}
+
 .header__menu ul li .dropdown__menu li {
 	display: block;
 	margin-right: 0;
@@ -616,6 +638,11 @@ ol {
 	display: block !important;
 }
 
+.slicknav_nav ul {
+    margin: 0px;
+    padding-left: 7px;
+}
+
 .slicknav_nav li a {
 	font-size: 15px;
 	color: #ffffff;
@@ -624,7 +651,7 @@ ol {
 	-webkit-transition: all 0.4s;
 	-o-transition: all 0.4s;
 	transition: all 0.4s;
-	padding: 10px 0;
+	padding: 5px 0;
 	margin: 0;
 }
 
@@ -632,6 +659,12 @@ ol {
 	background: transparent;
 	color: #f4952f;
 	text-decoration: underline;
+}
+
+.row-grid {
+	width: 50vw;
+	display: grid;
+	grid-template-columns: 50% 50%;
 }
 
 .slicknav_nav ul {
@@ -2552,7 +2585,9 @@ ol {
 /*---------------------
   Contact
 -----------------------*/
-
+.contact_icon {
+	max-width: 5%;
+}
 .contact {
 	padding-top: 0;
 }
