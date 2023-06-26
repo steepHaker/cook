@@ -11,7 +11,7 @@ class PostListView(ListView):
     model = Post
 
     def get_queryset(self):
-        return Post.objects.filter(category__tag=self.kwargs.get("slug")).select_related('category')
+        return Post.objects.filter(category__slug=self.kwargs.get("slug")).select_related('category')
     
     
 
