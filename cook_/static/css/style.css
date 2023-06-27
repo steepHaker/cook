@@ -2562,7 +2562,7 @@ ol {
 	content: "";
 }
 
-.about__right__text .about__right__text__social {
+.about__right__text {
 	margin-top: 30px;
 }
 
@@ -2582,9 +2582,21 @@ ol {
 	margin-right: 0;
 }
 
+.about__right__text__social {
+	display: flex;
+	width: 100px;
+	height:auto;
+}
+
 /*---------------------
   Contact
 -----------------------*/
+.header__social {
+	display: grid;
+    grid-template-columns: 200px;
+
+}
+
 .contact_icon {
 	max-width: 5%;
 }
